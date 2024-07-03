@@ -10,7 +10,6 @@
 		FC4DF3B42C34ED57000FE453 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4DF3B32C34ED57000FE453 /* AppDelegate.swift */; };
 		FC4DF3B62C34ED57000FE453 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4DF3B52C34ED57000FE453 /* SceneDelegate.swift */; };
 		FC4DF3B82C34ED57000FE453 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4DF3B72C34ED57000FE453 /* ViewController.swift */; };
-		FC4DF3BB2C34ED57000FE453 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC4DF3B92C34ED57000FE453 /* Main.storyboard */; };
 		FC4DF3BD2C34ED58000FE453 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC4DF3BC2C34ED58000FE453 /* Assets.xcassets */; };
 		FC4DF3C02C34ED58000FE453 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC4DF3BE2C34ED58000FE453 /* LaunchScreen.storyboard */; };
 		FC4DF3CB2C34ED58000FE453 /* PokemonWikiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4DF3CA2C34ED58000FE453 /* PokemonWikiTests.swift */; };
@@ -40,7 +39,6 @@
 		FC4DF3B32C34ED57000FE453 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC4DF3B52C34ED57000FE453 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FC4DF3B72C34ED57000FE453 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FC4DF3BA2C34ED57000FE453 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC4DF3BC2C34ED58000FE453 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC4DF3BF2C34ED58000FE453 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC4DF3C12C34ED58000FE453 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -102,7 +100,6 @@
 				FC4DF3B32C34ED57000FE453 /* AppDelegate.swift */,
 				FC4DF3B52C34ED57000FE453 /* SceneDelegate.swift */,
 				FC4DF3B72C34ED57000FE453 /* ViewController.swift */,
-				FC4DF3B92C34ED57000FE453 /* Main.storyboard */,
 				FC4DF3BC2C34ED58000FE453 /* Assets.xcassets */,
 				FC4DF3BE2C34ED58000FE453 /* LaunchScreen.storyboard */,
 				FC4DF3C12C34ED58000FE453 /* Info.plist */,
@@ -233,7 +230,6 @@
 			files = (
 				FC4DF3C02C34ED58000FE453 /* LaunchScreen.storyboard in Resources */,
 				FC4DF3BD2C34ED58000FE453 /* Assets.xcassets in Resources */,
-				FC4DF3BB2C34ED57000FE453 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +293,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		FC4DF3B92C34ED57000FE453 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FC4DF3BA2C34ED57000FE453 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FC4DF3BE2C34ED58000FE453 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -447,9 +435,9 @@
 				INFOPLIST_FILE = PokemonWiki/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -475,9 +463,9 @@
 				INFOPLIST_FILE = PokemonWiki/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
