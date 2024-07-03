@@ -15,6 +15,8 @@
 		FC4DF3CB2C34ED58000FE453 /* PokemonWikiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4DF3CA2C34ED58000FE453 /* PokemonWikiTests.swift */; };
 		FC4DF3D52C34ED58000FE453 /* PokemonWikiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4DF3D42C34ED58000FE453 /* PokemonWikiUITests.swift */; };
 		FC4DF3D72C34ED58000FE453 /* PokemonWikiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4DF3D62C34ED58000FE453 /* PokemonWikiUITestsLaunchTests.swift */; };
+		FC4DF3F02C3500AC000FE453 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FC4DF3EF2C3500AC000FE453 /* SnapKit */; };
+		FC4DF3F32C350114000FE453 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FC4DF3F22C350114000FE453 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +35,19 @@
 			remoteInfo = PokemonWiki;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FC4DF3E92C350007000FE453 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FC4DF3B02C34ED57000FE453 /* PokemonWiki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonWiki.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +69,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC4DF3F02C3500AC000FE453 /* SnapKit in Frameworks */,
+				FC4DF3F32C350114000FE453 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +98,7 @@
 				FC4DF3C92C34ED58000FE453 /* PokemonWikiTests */,
 				FC4DF3D32C34ED58000FE453 /* PokemonWikiUITests */,
 				FC4DF3B12C34ED57000FE453 /* Products */,
+				FC4DF3EA2C350031000FE453 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,6 +142,13 @@
 			path = PokemonWikiUITests;
 			sourceTree = "<group>";
 		};
+		FC4DF3EA2C350031000FE453 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,12 +159,17 @@
 				FC4DF3AC2C34ED57000FE453 /* Sources */,
 				FC4DF3AD2C34ED57000FE453 /* Frameworks */,
 				FC4DF3AE2C34ED57000FE453 /* Resources */,
+				FC4DF3E92C350007000FE453 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = PokemonWiki;
+			packageProductDependencies = (
+				FC4DF3EF2C3500AC000FE453 /* SnapKit */,
+				FC4DF3F22C350114000FE453 /* Alamofire */,
+			);
 			productName = PokemonWiki;
 			productReference = FC4DF3B02C34ED57000FE453 /* PokemonWiki.app */;
 			productType = "com.apple.product-type.application";
@@ -212,6 +242,10 @@
 				Base,
 			);
 			mainGroup = FC4DF3A72C34ED57000FE453;
+			packageReferences = (
+				FC4DF3EE2C3500AC000FE453 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				FC4DF3F12C350114000FE453 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = FC4DF3B12C34ED57000FE453 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -595,6 +629,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FC4DF3EE2C3500AC000FE453 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		FC4DF3F12C350114000FE453 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FC4DF3EF2C3500AC000FE453 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC4DF3EE2C3500AC000FE453 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		FC4DF3F22C350114000FE453 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC4DF3F12C350114000FE453 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FC4DF3A82C34ED57000FE453 /* Project object */;
 }
