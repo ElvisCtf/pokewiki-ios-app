@@ -17,6 +17,8 @@
 		FC4DF3D72C34ED58000FE453 /* PokemonWikiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4DF3D62C34ED58000FE453 /* PokemonWikiUITestsLaunchTests.swift */; };
 		FC4DF3F02C3500AC000FE453 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = FC4DF3EF2C3500AC000FE453 /* SnapKit */; };
 		FC4DF3F32C350114000FE453 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = FC4DF3F22C350114000FE453 /* Alamofire */; };
+		FC4DF3FD2C35117F000FE453 /* UIWindow+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4DF3FC2C35117E000FE453 /* UIWindow+Ext.swift */; };
+		FC4DF3FF2C354B8B000FE453 /* PokemonCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4DF3FE2C354B8B000FE453 /* PokemonCVCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +64,8 @@
 		FC4DF3D02C34ED58000FE453 /* PokemonWikiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokemonWikiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC4DF3D42C34ED58000FE453 /* PokemonWikiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonWikiUITests.swift; sourceTree = "<group>"; };
 		FC4DF3D62C34ED58000FE453 /* PokemonWikiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonWikiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FC4DF3FC2C35117E000FE453 /* UIWindow+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIWindow+Ext.swift"; sourceTree = "<group>"; };
+		FC4DF3FE2C354B8B000FE453 /* PokemonCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonCVCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +123,7 @@
 				FC4DF3B52C34ED57000FE453 /* SceneDelegate.swift */,
 				FC4DF3F52C3507F5000FE453 /* Feature */,
 				FC4DF3F72C3509EF000FE453 /* UI */,
+				FC4DF3FB2C351165000FE453 /* Extension */,
 				FC4DF3F42C3507C4000FE453 /* Resource */,
 				FC4DF3C12C34ED58000FE453 /* Info.plist */,
 			);
@@ -187,6 +192,7 @@
 			isa = PBXGroup;
 			children = (
 				FC4DF3B72C34ED57000FE453 /* GalleryViewController.swift */,
+				FC4DF3FE2C354B8B000FE453 /* PokemonCVCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -203,6 +209,14 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FC4DF3FB2C351165000FE453 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				FC4DF3FC2C35117E000FE453 /* UIWindow+Ext.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -347,6 +361,8 @@
 				FC4DF3B82C34ED57000FE453 /* GalleryViewController.swift in Sources */,
 				FC4DF3B42C34ED57000FE453 /* AppDelegate.swift in Sources */,
 				FC4DF3B62C34ED57000FE453 /* SceneDelegate.swift in Sources */,
+				FC4DF3FF2C354B8B000FE453 /* PokemonCVCell.swift in Sources */,
+				FC4DF3FD2C35117F000FE453 /* UIWindow+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

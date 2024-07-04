@@ -20,7 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = GalleryViewController()
+        window?.rootViewController = UINavigationController(rootViewController: GalleryViewController())
         window?.makeKeyAndVisible()
     }
 
