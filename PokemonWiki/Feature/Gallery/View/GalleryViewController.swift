@@ -7,10 +7,11 @@
 
 import UIKit
 import SnapKit
+import Combine
 
 class GalleryViewController: UIViewController {
-    let pokemonList = Array(0...9)
-    let searchController = UISearchController()
+    let viewModel = GalleryViewModel()
+    var cancellables: Set<AnyCancellable> = []
     
     lazy var galleryCV: UICollectionView = {
         let flow = UICollectionViewFlowLayout()
@@ -32,11 +33,15 @@ class GalleryViewController: UIViewController {
         
         return cv
     }()
+    
+    let searchController = UISearchController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         initUI()
         setLayout()
+        setBinding()
+        requestData()
     }
     
     func initUI() {
@@ -61,12 +66,27 @@ class GalleryViewController: UIViewController {
             $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom)
         }
     }
+    
+    func setBinding() {
+       viewModel.$pokemons
+            .sink { pokemons in
+                DispatchQueue.main.async {
+                    self.galleryCV.reloadData()
+                }
+            }
+            .store(in: &cancellables)
+    }
+    
+    func requestData() {
+        Task {
+            await viewModel.getPokemons()
+        }
+    }
 }
 
 extension GalleryViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return pokemonList.count
+        return viewModel.pokemons.count
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -75,10 +95,11 @@ extension GalleryViewController: UICollectionViewDelegate, UICollectionViewDataS
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = galleryCV.dequeueReusableCell(withReuseIdentifier: PokemonCVCell.reuseIdentifier, for: indexPath) as! PokemonCVCell
+        cell.setContent(name: viewModel.pokemons[indexPath.row].name)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("MONKE tap")
+        
     }
 }

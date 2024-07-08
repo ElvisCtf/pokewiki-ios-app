@@ -51,6 +51,10 @@ class PokemonCVCell: UICollectionViewCell {
         ).cgPath
     }
     
+    func setContent(name: String?) {
+        nameLbl.text = name
+    }
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
