@@ -8,7 +8,7 @@
 import Foundation
 
 final class GalleryViewModel {
-    @MainActor @Published var pokemons = [PokemonID]()
+    @MainActor @Published var pokemons = [PokemonModel]()
     @MainActor @Published var errorMessage = ""
     
     init() {}
@@ -18,8 +18,21 @@ final class GalleryViewModel {
             self.errorMessage = ""
         }
         if let dto = await NetworkAPI.getPokemons() {
-            await MainActor.run {
-                self.pokemons = dto.results ?? []
+            let pokemonIDs = dto.results ?? []
+            var pokemonList = [PokemonModel]()
+            for (i, item) in pokemonIDs.enumerated() {
+                let image = await NetworkAPI.getPokemonImage(name: item.name.safeValue)
+                let pokemon = PokemonModel(
+                    id: i+1,
+                    name: item.name.safeValue,
+                    image: image ?? Data(),
+                    url: item.url.safeValue
+                )
+                pokemonList.append(pokemon)
+            }
+            
+            await MainActor.run { [pokemonList] in
+                self.pokemons = pokemonList
             }
         } else {
             await MainActor.run {
@@ -27,4 +40,5 @@ final class GalleryViewModel {
             }
         }
     }
+    
 }

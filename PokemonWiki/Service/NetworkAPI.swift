@@ -13,7 +13,18 @@ class NetworkAPI {
             let dto = try await NetworkManager.shared.request(method: .get, url: APIEndpoints.pokemon, of: PokemonListResponseDto.self)
             return dto
         } catch {
-            print("[‼️] getCurrentWeatherReport() \(String(describing: error))")
+            print("[‼️] \(#function) \(String(describing: error))")
+            return nil
+        }
+    }
+    
+    static func getPokemonImage(name: String) async -> Data? {
+        do {
+            let url = String.init(format: APIEndpoints.pokemonImage, name)
+            let data = try await NetworkManager.shared.downloadData(from: URL(string: url)!)
+            return data
+        } catch {
+            print("[‼️] \(#function) \(String(describing: error))")
             return nil
         }
     }

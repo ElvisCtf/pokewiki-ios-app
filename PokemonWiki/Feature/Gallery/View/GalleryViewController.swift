@@ -13,12 +13,13 @@ class GalleryViewController: UIViewController {
     let viewModel = GalleryViewModel()
     var cancellables: Set<AnyCancellable> = []
     
+    let padding = 16.0
+    let cellPadding = 16.0
+    lazy var itemWidth = (UIScreen.width - (padding * 2) - cellPadding) / 2
+    lazy var itemHeight = itemWidth * 4 / 3
+    
     lazy var galleryCV: UICollectionView = {
         let flow = UICollectionViewFlowLayout()
-        let padding = 16.0
-        let cellPadding = 16.0
-        let itemWidth = (UIScreen.width - (padding * 2) - cellPadding) / 2
-        let itemHeight = itemWidth * 4 / 3
         flow.itemSize = CGSize.init(width: itemWidth, height: itemHeight)
         flow.minimumLineSpacing = 16
         flow.minimumInteritemSpacing = 16
@@ -69,7 +70,7 @@ class GalleryViewController: UIViewController {
     
     func setBinding() {
        viewModel.$pokemons
-            .sink { pokemons in
+            .sink { _ in 
                 DispatchQueue.main.async {
                     self.galleryCV.reloadData()
                 }
@@ -95,7 +96,7 @@ extension GalleryViewController: UICollectionViewDelegate, UICollectionViewDataS
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = galleryCV.dequeueReusableCell(withReuseIdentifier: PokemonCVCell.reuseIdentifier, for: indexPath) as! PokemonCVCell
-        cell.setContent(name: viewModel.pokemons[indexPath.row].name)
+        cell.setContent(name: viewModel.pokemons[indexPath.row].name, image: viewModel.pokemons[indexPath.row].image, size: CGSize(width: itemWidth, height: itemHeight))
         return cell
     }
     
