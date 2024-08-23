@@ -2,7 +2,8 @@
 
 ## Overview
 **PokeWiki** is an iOS app, which allows users to view the information of pokemons.
-It is still under development.
+It is still under development.<br/>
+<img src="https://github.com/user-attachments/assets/2ec83b9d-f0dc-491c-a4e7-78469f83e09e" width="200">
 
 ## Features
 - ✅ Search pokemon by name
