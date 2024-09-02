@@ -2,7 +2,7 @@
 //  PokemonWikiUITestsLaunchTests.swift
 //  PokemonWikiUITests
 //
-//  Created by Elvis Cheng (ESD - Software Trainee, Digital Solutions) on 3/7/2024.
+//  Created by Elvis Cheng on 3/7/2024.
 //
 
 import XCTest
