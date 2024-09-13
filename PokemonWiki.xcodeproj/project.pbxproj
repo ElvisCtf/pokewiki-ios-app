@@ -133,9 +133,8 @@
 		FC4DF3B22C34ED57000FE453 /* PokemonWiki */ = {
 			isa = PBXGroup;
 			children = (
+				FCC4F8F12C943F9000B05198 /* Core */,
 				FCEBE9312C36A73B004308CE /* Service */,
-				FC4DF3B32C34ED57000FE453 /* AppDelegate.swift */,
-				FC4DF3B52C34ED57000FE453 /* SceneDelegate.swift */,
 				FC4DF3F52C3507F5000FE453 /* Feature */,
 				FC4DF3F72C3509EF000FE453 /* UI */,
 				FC4DF3FB2C351165000FE453 /* Extension */,
@@ -235,6 +234,15 @@
 				FC6E146C2C3E44B900400C94 /* String+Ext.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		FCC4F8F12C943F9000B05198 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				FC4DF3B32C34ED57000FE453 /* AppDelegate.swift */,
+				FC4DF3B52C34ED57000FE453 /* SceneDelegate.swift */,
+			);
+			path = Core;
 			sourceTree = "<group>";
 		};
 		FCD9AFBE2C378E0C00E67542 /* Model */ = {
